@@ -1,4 +1,4 @@
-package redis-client-benchmark;
+package redisClientBenchmark;
 
 import org.junit.Test;
 

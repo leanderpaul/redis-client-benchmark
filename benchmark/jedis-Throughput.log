@@ -1,0 +1,75 @@
+# JMH version: 1.21
+# VM version: JDK 1.8.0_242, OpenJDK 64-Bit Server VM, 25.242-b08
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Dfile.encoding=UTF-8
+# Warmup: 1 iterations, 10 s each
+# Measurement: 10 iterations, 600 ms each
+# Timeout: 10 min per iteration
+# Threads: 100 threads, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: redisClientBenchmark.JedisConnection.get
+
+# Run progress: 0.00% complete, ETA 00:00:32
+# Fork: 1 of 1
+# Warmup Iteration   1: 11.274 ops/ms
+Iteration   1: 12.203 ops/ms
+Iteration   2: 11.876 ops/ms
+Iteration   3: 10.628 ops/ms
+Iteration   4: 11.012 ops/ms
+Iteration   5: 11.805 ops/ms
+Iteration   6: 11.129 ops/ms
+Iteration   7: 12.222 ops/ms
+Iteration   8: 11.769 ops/ms
+Iteration   9: 12.405 ops/ms
+Iteration  10: 10.952 ops/ms
+
+
+Result "redisClientBenchmark.JedisConnection.get":
+  11.600 ±(99.9%) 0.940 ops/ms [Average]
+  (min, avg, max) = (10.628, 11.600, 12.405), stdev = 0.621
+  CI (99.9%): [10.661, 12.540] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 1.8.0_242, OpenJDK 64-Bit Server VM, 25.242-b08
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Dfile.encoding=UTF-8
+# Warmup: 1 iterations, 10 s each
+# Measurement: 10 iterations, 600 ms each
+# Timeout: 10 min per iteration
+# Threads: 100 threads, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: redisClientBenchmark.JedisConnection.set
+
+# Run progress: 50.00% complete, ETA 00:00:21
+# Fork: 1 of 1
+# Warmup Iteration   1: 10.572 ops/ms
+Iteration   1: 9.951 ops/ms
+Iteration   2: 10.497 ops/ms
+Iteration   3: 10.185 ops/ms
+Iteration   4: 12.383 ops/ms
+Iteration   5: 11.451 ops/ms
+Iteration   6: 11.463 ops/ms
+Iteration   7: 11.276 ops/ms
+Iteration   8: 11.444 ops/ms
+Iteration   9: 10.985 ops/ms
+Iteration  10: 12.682 ops/ms
+
+
+Result "redisClientBenchmark.JedisConnection.set":
+  11.232 ±(99.9%) 1.325 ops/ms [Average]
+  (min, avg, max) = (9.951, 11.232, 12.682), stdev = 0.876
+  CI (99.9%): [9.907, 12.556] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:00:44
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+Benchmark                                  Mode  Cnt   Score   Error   Units
+redisClientBenchmark.JedisConnection.get  thrpt   10  11.600 ± 0.940  ops/ms
+redisClientBenchmark.JedisConnection.set  thrpt   10  11.232 ± 1.325  ops/ms

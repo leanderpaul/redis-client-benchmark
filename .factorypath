@@ -1,0 +1,18 @@
+<factorypath>
+    <factorypathentry kind="VARJAR" id="M2_REPO/redis/clients/jedis/3.2.0/jedis-3.2.0.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/apache/commons/commons-pool2/2.6.2/commons-pool2-2.6.2.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/io/lettuce/lettuce-core/5.2.2.RELEASE/lettuce-core-5.2.2.RELEASE.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/io/netty/netty-common/4.1.45.Final/netty-common-4.1.45.Final.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/io/netty/netty-handler/4.1.45.Final/netty-handler-4.1.45.Final.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/io/netty/netty-buffer/4.1.45.Final/netty-buffer-4.1.45.Final.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/io/netty/netty-codec/4.1.45.Final/netty-codec-4.1.45.Final.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/io/netty/netty-transport/4.1.45.Final/netty-transport-4.1.45.Final.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/io/netty/netty-resolver/4.1.45.Final/netty-resolver-4.1.45.Final.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/io/projectreactor/reactor-core/3.3.2.RELEASE/reactor-core-3.3.2.RELEASE.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/reactivestreams/reactive-streams/1.0.3/reactive-streams-1.0.3.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/openjdk/jmh/jmh-core/1.21/jmh-core-1.21.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/net/sf/jopt-simple/jopt-simple/4.6/jopt-simple-4.6.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/apache/commons/commons-math3/3.2/commons-math3-3.2.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/openjdk/jmh/jmh-generator-annprocess/1.21/jmh-generator-annprocess-1.21.jar" enabled="true" runInBatchMode="false"/>
+</factorypath>
