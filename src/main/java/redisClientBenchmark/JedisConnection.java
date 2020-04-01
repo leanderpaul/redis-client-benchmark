@@ -34,7 +34,7 @@ public class JedisConnection {
 
     @Benchmark
     public void set() {
-        for(int i =0;i<LOOP;i++) {
+        for(int i = 0; i < LOOP; ++i) {
             jedis.set("key", "value");
         }
     }

@@ -17,6 +17,7 @@ import java.util.concurrent.ExecutionException;
 import io.lettuce.core.RedisClient;
 import io.lettuce.core.api.StatefulRedisConnection;
 import io.lettuce.core.api.async.RedisAsyncCommands;
+import io.lettuce.core.api.sync.RedisCommands;
 
 @BenchmarkMode(Mode.Throughput)
 @Warmup(iterations = 1)
@@ -28,26 +29,42 @@ public class LettuceConnection {
 
     private static final int LOOP = 1;
     private StatefulRedisConnection<String, String> connection;
-    private RedisAsyncCommands<String,String> commands = null;
+    private RedisAsyncCommands<String,String> asyncCommands = null;
+    private RedisCommands<String,String> syncCommands = null;
 
     @Setup
     public void setup() {
         RedisClient client = RedisClient.create("redis://localhost");
         connection = client.connect();
-        commands = connection.async();
+        asyncCommands = connection.async();
+        syncCommands = connection.sync();
     }
 
     @Benchmark
-    public void get() throws ExecutionException, InterruptedException {
+    public void asyncGet() throws ExecutionException, InterruptedException {
         for (int i = 0; i < LOOP; ++i) {
-            commands.get("key");
+            asyncCommands.get("key");
         }
     }
 
     @Benchmark
-    public void set() throws ExecutionException, InterruptedException {
+    public void asyncSet() throws ExecutionException, InterruptedException {
         for (int i = 0; i < LOOP; ++i) {
-            commands.set("key", "value");
+            asyncCommands.set("key", "value");
+        }
+    }
+
+    @Benchmark
+    public void syncGet() throws ExecutionException, InterruptedException {
+        for (int i = 0; i < LOOP; ++i) {
+            syncCommands.get("key");
+        }
+    }
+
+    @Benchmark
+    public void syncSet() throws ExecutionException, InterruptedException {
+        for (int i = 0; i < LOOP; ++i) {
+            syncCommands.set("key", "value");
         }
     }
 }
