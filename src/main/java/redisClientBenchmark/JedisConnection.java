@@ -20,7 +20,7 @@ import java.util.concurrent.TimeUnit;
 @Warmup(iterations = 1)
 @Threads(100)
 @State(Scope.Thread)
-@Measurement(iterations = 10, time = 600, timeUnit = TimeUnit.MILLISECONDS)
+@Measurement(iterations = 2, time = 600, timeUnit = TimeUnit.MILLISECONDS)
 @OutputTimeUnit(TimeUnit.MILLISECONDS)
 public class JedisConnection {
 

@@ -12,14 +12,19 @@ public final class App {
     private App() {
     }
 
-    /**
-     * Says hello to the world.
-     *
-     * @param args The arguments of the program.
-     */
     public static void main(String[] args) throws RunnerException {
-        Options options = new OptionsBuilder().include(JedisConnection.class.getSimpleName())
+        /**
+         * For Benchmarking Jedis redis client.
+         */
+        Options jedisOptions = new OptionsBuilder().include(JedisConnection.class.getSimpleName())
                 .output("benchmark/jedis-Throughput.log").forks(1).build();
-        new Runner(options).run();
+        new Runner(jedisOptions).run();
+
+        /**
+         * For benchmarking Lettuce redis client.
+         */
+        Options lettuceOptions = new OptionsBuilder().include(LettuceConnection.class.getSimpleName())
+                .output("benchmark/lettuce-Throughput.log").forks(1).build();
+        new Runner(lettuceOptions).run();
     }
 }
